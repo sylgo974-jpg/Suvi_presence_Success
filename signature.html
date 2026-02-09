@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature Apprenant - Pointage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✍️ Signature de Présence</h1>
+            <p class="subtitle">Pointage conforme Qualiopi</p>
+        </header>
+
+        <div class="card">
+            <div class="info-box session-info">
+                <p><strong>👨‍🏫 Formateur:</strong> <span id="session-formateur"></span></p>
+                <p><strong>📚 Formation:</strong> <span id="session-formation"></span></p>
+                <p><strong>📅 Date:</strong> <span id="session-date"></span></p>
+                <p><strong>🕐 Créneau:</strong> <span id="session-creneau"></span></p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Vos Informations</h2>
+
+            <div class="form-group">
+                <label for="apprenant-nom">Votre Nom *</label>
+                <input type="text" id="apprenant-nom" placeholder="Ex: MARTIN" required>
+            </div>
+
+            <div class="form-group">
+                <label for="apprenant-prenom">Votre Prénom *</label>
+                <input type="text" id="apprenant-prenom" placeholder="Ex: Marie" required>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Votre Signature</h2>
+            <p class="info-text">Signez dans le cadre ci-dessous avec votre doigt ou stylet</p>
+
+            <div class="signature-pad-container">
+                <canvas id="signature-pad" width="600" height="300"></canvas>
+            </div>
+
+            <div class="signature-actions">
+                <button id="clear-signature" class="btn-secondary">🔄 Effacer</button>
+                <button id="submit-signature" class="btn-primary">✅ Valider ma Présence</button>
+            </div>
+        </div>
+
+        <div id="success-message" class="card success-card hidden">
+            <h2>✅ Présence Enregistrée</h2>
+            <p>Merci ! Votre signature a été enregistrée avec succès.</p>
+            <p class="info-text">Vous pouvez fermer cette page.</p>
+        </div>
+
+        <div id="error-message" class="card error-card hidden">
+            <h2>❌ Erreur</h2>
+            <p id="error-text"></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+    <script src="js/apprenant.js"></script>
+</body>
+</html>
