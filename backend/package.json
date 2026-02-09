@@ -1,0 +1,19 @@
+{
+  "name": "pointage-qualiopi-backend",
+  "version": "1.0.0",
+  "description": "API Backend pour système de pointage Qualiopi",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "googleapis": "^118.0.0",
+    "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=18.x"
+  }
+}
